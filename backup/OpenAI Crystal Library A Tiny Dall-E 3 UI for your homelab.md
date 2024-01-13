@@ -1,7 +1,5 @@
-
-![opanaicr](
 ![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*FpWQ8XB29XIplUJNMkAm0Q.png)
-)
+
 
 [Simon Marache](https://github.com/Blizarre) [MicroDalle](https://github.com/Blizarre/microdalle.git) project suited me very well because of his use of the openai library in Python and flask, at first glance the project seemed lost because I could not find any library that allowed me to work with the chatgpt api, on the other hand I did not know in crystal any framework for building servers and worst of all I haven't written anything for more than 3 months because of reserve service and I really had no desire to go back to sitting in front of the computer and especially not writing code.
 But this project gave me back my desire to explore and opened up a new horizon, to take a rich, easy-to-learn language and write the libraries and the project myself without just importing existing things, on one screen the library with the debugger and on the other side the server that is based on the same library, because I immersed myself in the crystal syntax and in the book The only one I found was "Crystal Programming" by George Dietrich and both projects were written as one.
