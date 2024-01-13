@@ -14,7 +14,7 @@
     </script>
     
 <title>OpenAI Crystal Library A Tiny Dall-E 3 UI for your homelab</title>
-
+<link href="//unpkg.com/@wooorm/starry-night@2.1.1/style/both.css" rel="stylesheet" />
 
 </head>
 <style>
@@ -72,21 +72,24 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <p><a target="_blank" rel="noopener noreferrer" href=""><img alt="opanaicr" style="max-width: 100%;"></a></p>
 <p><a href="https://github.com/Blizarre">Simon Marache</a> <a href="https://github.com/Blizarre/microdalle.git">MicroDalle</a> project suited me very well because of his use of the openai library in Python and flask, at first glance the project seemed lost because I could not find any library that allowed me to work with the chatgpt api, on the other hand I did not know in crystal any framework for building servers and worst of all I haven't written anything for more than 3 months because of reserve service and I really had no desire to go back to sitting in front of the computer and especially not writing code.<br>
 But this project gave me back my desire to explore and opened up a new horizon, to take a rich, easy-to-learn language and write the libraries and the project myself without just importing existing things, on one screen the library with the debugger and on the other side the server that is based on the same library, because I immersed myself in the crystal syntax and in the book The only one I found was "Crystal Programming" by George Dietrich and both projects were written as one.<br>
-Another good thing in my experience along the way is learning to work with <a href="https://kemalcr.com/" rel="nofollow">Kemal</a>, Lightning Fast, Super Simple web framework.<br>
-GitHub <a href="https://github.com/DmarshalTU/microdallecr.git">MicroDalle_cr</a><br>
-As I wrote in the previous article about <a href="https://medium.com/@denismarshalltumakov/openai-crystal-library-bridging-machine-learning-and-the-crystal-language-f88a9536ba0b" rel="nofollow">OpenAI Crystal Library: Bridging Machine Learning and the Crystal Language</a>, the OpenAI Crystal Library is focused on providing a straightforward and efficient interface for integrating OpenAI's machine learning capabilities with Crystal-based applications. It's not about reinventing the wheel; it's about building solid connections between existing technologies and learn new things.<br>
-The project made me promote the library and also add the possibility of working with photos and not just as a chat, this is what came out.<br>
-GitHub <a href="https://github.com/DmarshalTU/openai.git">OpenAI_CR</a><br>
-require "openai"</p>
-<p>Log.setup_from_env</p>
-<p>OPENAI_KEY = "xxxxxxxxxx"<br>
-client = OpenAI::Client.new(OPENAI_KEY)</p>
-<p>response = client.create_image_completion("dall-e-3", "image description", size, hd, 1)<br>
-in the future if this library will get to <a href="https://shardbox.org/" rel="nofollow">ShardBox</a>, it can be imported via dependencies:<br>
-dependencies:<br>
-openai:<br>
-github: dmarshaltu/openai<br>
-The journey has just begun and there is still a long way to go.</p>
+Another good thing in my experience along the way is learning to work with <a href="https://kemalcr.com/" rel="nofollow">Kemal</a>, Lightning Fast, Super Simple web framework.</p>
+<p>GitHub <a href="https://github.com/DmarshalTU/microdallecr.git">MicroDalle_cr</a></p>
+<p>As I wrote in the previous article about <a href="https://medium.com/@denismarshalltumakov/openai-crystal-library-bridging-machine-learning-and-the-crystal-language-f88a9536ba0b" rel="nofollow">OpenAI Crystal Library: Bridging Machine Learning and the Crystal Language</a>, the OpenAI Crystal Library is focused on providing a straightforward and efficient interface for integrating OpenAI's machine learning capabilities with Crystal-based applications. It's not about reinventing the wheel; it's about building solid connections between existing technologies and learn new things.</p>
+<p>The project made me promote the library and also add the possibility of working with photos and not just as a chat, this is what came out.</p>
+<p>GitHub <a href="https://github.com/DmarshalTU/openai.git">OpenAI_CR</a></p>
+<div class="highlight highlight-source-crystal"><pre class="notranslate"><span class="pl-k">require</span> <span class="pl-s"><span class="pl-pds">"</span>openai<span class="pl-pds">"</span></span>
+
+<span class="pl-c1">Log</span>.setup_from_env
+
+<span class="pl-c1">OPENAI_KEY</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>xxxxxxxxxx<span class="pl-pds">"</span></span>
+client <span class="pl-k">=</span> <span class="pl-c1">OpenAI</span>::<span class="pl-c1">Client</span>.new(<span class="pl-c1">OPENAI_KEY</span>)
+
+response <span class="pl-k">=</span> client.create_image_completion(<span class="pl-s"><span class="pl-pds">"</span>dall-e-3<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>image description<span class="pl-pds">"</span></span>, size, hd, <span class="pl-c1">1</span>)</pre></div>
+<p>in the future if this library will get to <a href="https://shardbox.org/" rel="nofollow">ShardBox</a>, it can be imported via dependencies:</p>
+<div class="highlight highlight-source-yaml"><pre class="notranslate"><span class="pl-ent">dependencies</span>:
+  <span class="pl-ent">openai</span>:
+    <span class="pl-ent">github</span>: <span class="pl-s">dmarshaltu/openai</span></pre></div>
+<p>The journey has just begun and there is still a long way to go.</p>
 </div>
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
 <div class="comments" id="comments"></div>
